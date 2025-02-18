@@ -1,0 +1,18 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace  # Removes trailing whitespace
+      - id: end-of-file-fixer     # Ensures newline at end of file
+      - id: check-yaml            # Checks YAML file validity
+      - id: check-json            # Ensures JSON files are valid
+      - id: flake8                # Python code linting
+      - id: black                 # Code formatter
+
+  - repo: local
+    hooks:
+      - id: custom-file-check
+        name: "Custom File Content Check"
+        entry: python custom_check.py
+        language: system
+        files: ".*"
