@@ -16,7 +16,7 @@ repos:
         entry: python custom_check.py
         language: system
         files: ".*"
-  - repo: https://github.com/pre-commit/mirrors-flake8
+  - repo: https://github.com/Quantco/pre-commit-mirrors-flake8
     rev: v3.9.2  # You can specify the latest version here
     hooks:
       - id: flake8
