@@ -16,3 +16,15 @@ repos:
         entry: python custom_check.py
         language: system
         files: ".*"
+  - repo: https://github.com/pre-commit/mirrors-flake8
+    rev: v3.9.2  # You can specify the latest version here
+    hooks:
+      - id: flake8
+        files: \.py$
+  - repo: https://github.com/pre-commit/mirrors-black
+    rev: v22.1.0
+    hooks:
+      - id: black
+        language_version: python3
+        files: \.py$
+
